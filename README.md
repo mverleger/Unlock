@@ -14,5 +14,22 @@ UNLOCK integrates with Canvas in two ways:
 
 # Installation
 
+Setup Pre-requisites:
+- Web Server
+- MySQL Database
+- Canvas LMS
+
+Once the web-server is setup, update the config.php file to reflect the server location.
+For the database, the "Setup" folder contains UNLOCK.sql which creates the tables.
+Once the database is setup, the /Setup/LMS_Preconnection_Setup.php creates the LMS access in the database.
+In Canvas, create a developer key (contact your Canvas admin) and update config.php.
+Then, add the tool through the LTI tools settings.  The Setup/ToolSettings.xml file contains the xml settings for adding the LTI tool.  Update it to reflect the server location.
+Finally, create a page in Canvas.  On that page, add the tool as an external tool.
 
 
+# References
+This tool is built on the following tools:
+- https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP
+  - Updated to replace the "mysql" data connector with the "mysqli" data connector.
+- https://github.com/cesbrandt/canvas-php-curl
+  - Handles the API interfacing
