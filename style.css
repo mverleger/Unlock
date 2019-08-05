@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+}
+/* CSS Document */
+
+.adminForm {
+	display: inline;
+}
+
+.submitButton {
+  margin: auto;
+}
+
+.AdminPanel{
+	display: block;
+	outline-color: #00549F;
+	outline-style: solid;
+	outline-width: medium;
+	width: 765px;
+	padding: 10;
+	margin-left: 10px;
+}
+
+.StudentBlock{
+	float: left;
+	outline-color: #00549F;
+	outline-style: solid;
+	outline-width: medium;
+	width: 765px;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding: 10px;
+}
+
+.HeaderText { font-size:x-large; font-family: sans-serif; text-align: center; margin:10px;}
+.SubheaderText { font-family: sans-serif; text-align: center; margin:10px;}
+
+/*******		LEADERBOARDS		*******/
+
+
+.LeaderboardBlock {
+	float: left;
+	display: block;
+	outline-color: #00549F;
+	outline-style: solid;
+	outline-width: medium;
+	width: 765px;
+	padding: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.TeamLeaderboardBlock {
+	float: right;
+	display: block;
+	padding: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.IndividualLeaderboardBlock {
+	float: left;
+	display: block;
+	padding: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+
+
+.LeaderboardHeader { font-size: larger; font-family: sans-serif; text-align: center; }
+
+.LeaderboardTable { border-color: #00549F; border-style: solid; border-width: 2px; border-collapse: collapse; width: 250px; }
+
+.LeaderboardCurrentPlayer {background-color: blue; color: yellow; }
+
+.LeaderboardNameColumn {width: 70%; text-align: left;}
+
+.LeaderboardName{ text-align: left; }
+
+.LeaderboardScoreColumn {width: 30%; text-align: right;}
+
+.LeaderboardScore{ text-align: right;}
+
+.UpdateTime {font-size: x-small;}
+
+
+
+
+
+
+
+
+
+/*******		PROGRESS BAR		*******/
+
+.CurrentProgressBlock{
+	float: left;
+	display: block;
+	outline-color: #00549F;
+	outline-style: solid;
+	outline-width: medium;
+	width: 765px;
+	padding: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.ProgressBarBlock {
+	width:725px;
+	padding:0px;
+	margin-left:20px; 
+	margin-right:20px; 
+	margin-top:5px;
+	margin-bottom:0px;
+	border:solid;
+}
+
+.ProgressBarTable{
+	width:100%;
+	border-collapse:collapse;
+	border: none;
+}
+.ProgressBarRow{
+	height:20px;
+	text-align:center;
+}
+
+
+
+
+
+
+
+/*******		HIVE		*******/
+
+
+.LabelLeft{
+	float: left;
+	font-size: larger;
+	font-family: sans-serif;
+}
+.LabelCenter{
+	text-align: center;
+	display:block;
+	font-size: larger;
+	font-family: sans-serif;
+}
+.LabelRight{
+	float: right;
+	font-size: larger;
+	font-family: sans-serif;
+}
+
+
+
+
+.HexGroup1{
+	padding-bottom: 70px;
+}
+
+.HexGroup2{
+	padding-bottom: 70px;
+}
+
+.HexGroup3{
+	padding-bottom: 70px;
+}
+
+
+#hexGrid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  list-style-type: none;
+  
+}
+
+.hex {
+  position: relative;
+  visibility:hidden;
+  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+}
+.hex::after{
+  content:'';
+  display:block;
+  padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5 */
+}
+.hexIn{
+  position: absolute;
+  width:96%;
+  padding-bottom: 110.851%; /* =  width / sin(60) */
+  margin:0 2%;
+  overflow: hidden;
+  visibility: hidden;
+  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+  -webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+      -ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+          transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+}
+.hexIn * {
+  position: absolute;
+  visibility: visible;
+  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+}
+.hexLink {
+    display:block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+        -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+            transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+}
+
+.hex.Level0 .hexLink{
+	background-color: rgba(144, 97, 162, .8);
+/* 	background-color: rgba(162, 144, 97, .5); */
+	
+}
+
+.hex.Level1 .hexLink{
+	background-color: rgba(220, 220, 220, .8);
+	
+}
+
+.hex.Level2 .hexLink{
+	  background-color: rgba(0,84,159,.8);
+	
+}
+
+.hex.Level3 .hexLink{
+	background-color: rgba(162, 144, 97, .8);
+	
+}
+
+
+
+/*** HEX CONTENT **********************************************************************/
+.hex img {
+  left: -100%;
+  right: -100%;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  opacity: 0.5;
+  -webkit-transform: rotate3d(0,0,0,0deg);
+      -ms-transform: rotate3d(0,0,0,0deg);
+          transform: rotate3d(0,0,0,0deg);
+}
+
+.hex h1, .hex p {
+  width: 100%;
+  padding: 5%;
+  box-sizing:border-box;
+  font-weight: 300;
+  -webkit-transition:  -webkit-transform .2s ease-out, opacity .3s ease-out;
+          transition:          transform .2s ease-out, opacity .3s ease-out;
+}
+
+.hex.Level0 h1, .hex.Level0 p{
+	background-color: rgba(144, 97, 162, .8);
+/* 	background-color: rgba(162, 144, 97, .5); */
+	  color: white;
+}
+
+.hex.Level1 h1, .hex.Level1 p{
+	background-color: rgba(220, 220, 220, .8);
+	color: black
+}
+
+.hex.Level2 h1, .hex.Level2 p{
+	  background-color: rgba(0,84,159,.8);
+	  color: white;
+}
+
+.hex.Level3 h1, .hex.Level3 p{
+	  background-color: rgba(162, 144, 97, .8);
+	  color: white;
+}
+
+
+.hex h1 {
+  bottom: 50%;
+  padding-top:50%;
+  font-size: 1em;
+  z-index: 1;
+
+	/* THIS HIDES THE TOP HALF UNTIL HOVER.  COMMENTING IT OUT MAKES IT SHOW ALL THE TIME*/
+  -webkit-transform:translate3d(0,20%,0);
+      -ms-transform:translate3d(0,20%,0);
+          transform:translate3d(0,20%,0);
+
+}
+.hex h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  width: 10%;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+
+.hex p{
+  top: 50%;
+  padding-bottom:50%;
+}
+
+.hex p.incomplete{
+  -webkit-transform:translate3d(0,100%,0);
+      -ms-transform:translate3d(0,100%,0);
+          transform:translate3d(0,100%,0);
+}
+
+.hex p.complete{
+  -webkit-transform:translate3d(0,20%,0);
+      -ms-transform:translate3d(0,20%,0);
+          transform:translate3d(0,20%,0);
+}
+
+/*** HOVER EFFECT  **********************************************************************/
+.hexLink:hover h1, .hexLink:focus h1,
+.hexLink:hover p, .hexLink:focus p{
+  -webkit-transform:translate3d(0,20%,0);
+      -ms-transform:translate3d(0,20%,0);
+          transform:translate3d(0,20%,0);
+}
+
+/*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
+  #hexGrid{
+    padding-bottom: 4.4%
+  }
+  .hex {
+    width: 14.28571429%; 
+  }
+
+  .hexGroup1 .hex:nth-child(1){
+	  margin-left:28.57142857%;
+  }
+  .hexGroup1 .hex:nth-child(3){
+	  margin-right:28.57142857%;
+  }
+
+
+  .hexGroup2 .hex:nth-child(1){
+	  margin-left:21.42857143%
+  }
+  .hexGroup2 .hex:nth-child(4){
+	  margin-right:21.42857143%
+  }
+  
+  .hex:nth-child(5){
+	  margin-left:14.28571429%
+  }
+  .hex:nth-child(9){
+	  margin-right:14.28571429%
+  }
+  
+  .hex:nth-child(10){
+	  margin-left:7.142857143%
+  }
+  .hex:nth-child(15){
+	  margin-right:7.142857143%
+  }
+  
+  .hex:nth-child(23){
+	  margin-left:7.142857143%
+  }
+  .hex:nth-child(28){
+	  margin-right:7.142857143%
+  }
+  
+  .hex:nth-child(29){
+	  margin-left:14.28571429%
+  }
+  .hex:nth-child(33){
+	  margin-right:14.28571429%
+  }
+
+  .hex:nth-child(34){
+	  margin-left:21.42857143%
+  }
+  .hex:nth-child(37){
+	  margin-right:21.42857143%
+  }
+  
+ 
+  .hexGroup3 .hex:nth-child(1){
+	  margin-left:35.71428571%;
+  }
+  .hexGroup3 .hex:nth-child(3){
+	  margin-right:35.71428571%;
+  }
+
+
+
