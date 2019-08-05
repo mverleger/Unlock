@@ -1,7 +1,7 @@
 # Unlock
 UNLOCK - Unique Non-Linear Organizer for Conveying Knowledge
 
-UNLOCK is a non-linear UI for the Canvas LMS system.  Instead of using the vertical "modules" system or manually creating a rectangular page, UNLOCK provides a hexagon-based layout that encourages non-linear curricular organization.  The toolset implements multiple gamification elements, specifically
+UNLOCK is a non-linear gamification UI for the Canvas LMS system.  Instead of using the vertical "modules" system or manually creating a rectangular page, UNLOCK provides a hexagon-based layout that encourages non-linear curricular organization. The toolset implements multiple gamification elements, specifically
 - Individual and Team leaderboards based on Canvas Groups
 - A Progress Bar
 - Multiple "Levels"
@@ -28,7 +28,7 @@ Finally, create a page in Canvas.  On that page, add the tool as an external too
 
 
 # References
-This tool is built on the following tools:
+UNLOCK is built on the following tools:
 - https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP
   - Updated to replace the "mysql" data connector with the "mysqli" data connector.
 - https://github.com/cesbrandt/canvas-php-curl
