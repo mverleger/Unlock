@@ -8,9 +8,11 @@ UNLOCK is a non-linear gamification UI for the Canvas LMS system.  Instead of us
 - A non-linear UI with level locking
 - Rubric based outcomes reporting
 
-UNLOCK integrates with Canvas in two ways:
+UNLOCK requires integration with Canvas in two ways:
 1) Using Developer Keys to allow for Canvas API access
+  - Used to access the assignments and tracking completion status
 2) As an LTI tool for launching an authenticated user
+  - Used to generate the UNLOCK main page
 
 # Installation
 
